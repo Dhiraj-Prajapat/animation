@@ -39,7 +39,7 @@ function Loader() {
         x2="360"
         y2="370"
         stroke="#ff0055"
-        custom={3}
+        custom={2}
         variants={draw}
       />
       <motion.line
@@ -48,7 +48,7 @@ function Loader() {
         x2="360"
         y2="230"
         stroke="#ff0055"
-        custom={3.5}
+        custom={2}
         variants={draw}
       />
       <motion.rect
@@ -58,7 +58,7 @@ function Loader() {
         y="230"
         rx="20"
         stroke="#00cc88"
-        custom={4}
+        custom={2}
         variants={draw}
       />
       

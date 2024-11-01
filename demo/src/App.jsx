@@ -5,21 +5,21 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import "./styles/app.css";
 import Home from "./pages/Home";
-import Loader from "./pages/Loader";
+import WordLoad from "./pages/WordLoad";
 
 const App = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     AOS.init({
-      duration: 1000, // Adjust animation duration
+      duration: 1000, 
     });
 
     // GSAP loader animation
     gsap.to("#loader", {
       opacity: 0,
       duration: 1.5,
-      delay: 4,
+      delay: 5,
       onComplete: () => {
         setLoading(false);
       },
@@ -31,17 +31,16 @@ const App = () => {
       {loading && (
         <div id="loader" className="loader flex-col">
           <motion.div
-            // initial={{ scale: 0.5, opacity: 0 }}
-            // animate={{ scale: 0, opacity: 0.5 }}
+            initial={{ scale: 0.5, opacity: 0 }}
+            animate={{ scale: 0, opacity: 0.5 }}
             transition={{ duration: 1.5, ease: "easeInOut" }}
             className="loader-animation"
           ></motion.div>
-          <Loader />
-          <h1 className="text-3xl">loading..</h1>
+
+          <WordLoad />
         </div>
       )}
 
-      {/* Main Content */}
       {!loading && <Home />}
     </>
   );

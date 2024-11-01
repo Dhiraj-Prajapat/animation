@@ -1,12 +1,11 @@
 /* Loader styling */
-#loader {
+/* #loader {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   background-color: #282c34;
-  /* Dark background for loader */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -26,4 +25,4 @@ line {
   stroke-width: 20px;
   stroke-linecap: round;
   fill: transparent;
-}
+} */
